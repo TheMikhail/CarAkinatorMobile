@@ -31,14 +31,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CarAkinatorMobileTheme {
-                App()
+                Application()
             }
         }
     }
 }
 @Composable
 @Preview
-fun App() {
+fun Application() {
     val car = CarRepositoryClass()
     val filteredCars = remember { mutableStateOf(car.getCar()) }
     val currentQuestion = remember { mutableStateOf(SelectNewQuestion.getNextQuestion()) }
